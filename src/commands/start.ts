@@ -1,6 +1,6 @@
 import { Command } from 'commander';
-import { getTask, Logger, zipDirectory } from '../utils/index.js';
-import { handleBackup, handleUpload } from '../utils/ftp.js';
+import { getTask, Logger, zipDirectory } from '../utils/index.ts';
+import { handleBackup, handleUpload } from '../utils/ftp.ts';
 import { Client } from 'ssh2';
 import { join, isAbsolute, basename, posix, win32 } from 'path';
 import { stat, unlink } from 'fs/promises';

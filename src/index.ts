@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { program } from 'commander';
 import chalk from 'chalk';
-import { startCommand } from './commands/start.js';
+import { startCommand } from './commands/start.ts';
 
 // 定义版本和描述
 program
@@ -17,5 +17,5 @@ program.parse(process.argv);
 // 处理无命令情况
 if (process.argv.length <= 2) {
   program.outputHelp();
-  console.log(chalk.yellow('\nExample: my-cli greet "John Doe"'));
+  console.log(chalk.yellow('\nExample: tci start demo'));
 }

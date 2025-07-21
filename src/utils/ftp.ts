@@ -1,7 +1,7 @@
 import { Client } from 'ssh2';
 import path from 'path';
 import fs from 'fs';
-import { generateTimestamp, sleep } from './index.js';
+import { generateTimestamp, sleep } from './index.ts';
 
 /**
  * 处理文件上传,依赖本地 fs 判断，远程需安装 unzip 命令。

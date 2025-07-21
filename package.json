@@ -1,20 +1,19 @@
 {
   "name": "@yimou6/tci",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A Node.js CLI tool.",
   "main": "dist/index.js",
-  "type": "module",
+  "type": "commonjs",
   "bin": {
     "tci": "dist/index.js"
   },
   "files": [
-    "dist", "package.json"
+    "dist",
+    "package.json"
   ],
   "scripts": {
     "dev:start": "tsx src/index.ts start 212",
-    "build:ts": "gulp",
-    "lint": "eslint . --ext .ts",
-    "format": "prettier --write ."
+    "build": "rollup --config rollup.config.mjs"
   },
   "keywords": [
     "cli",
@@ -23,32 +22,31 @@
   "author": "yimou6",
   "license": "MIT",
   "dependencies": {
-    "@types/ssh2": "^1.15.5",
     "chalk": "^5.4.1",
     "commander": "^14.0.0",
-    "cp": "^0.2.0",
-    "inquirer": "^12.7.0",
     "jszip": "^3.10.1",
     "ssh2": "^1.16.0",
-    "yaml": "^2.8.0",
-    "yargs": "^17.7.2"
+    "tsx": "^4.20.3",
+    "yaml": "^2.8.0"
   },
   "devDependencies": {
-    "@types/node": "^24.0.14",
-    "@types/yargs": "^17.0.33",
-    "@typescript-eslint/eslint-plugin": "^8.37.0",
-    "@typescript-eslint/parser": "^8.37.0",
-    "del": "^8.0.0",
+    "@eslint/js": "^9.31.0",
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.4",
+    "@types/node": "^24.0.15",
+    "@types/ssh2": "^1.15.5",
     "eslint": "^9.31.0",
-    "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-prettier": "^5.5.1",
-    "gulp": "^5.0.1",
-    "gulp-terser": "^2.1.0",
-    "gulp-typescript": "^6.0.0-alpha.1",
-    "nexe": "^5.0.0-beta.4",
-    "prettier": "^3.6.2",
-    "tsx": "^4.20.3",
-    "typescript": "^5.8.3"
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-perfectionist": "^4.15.0",
+    "globals": "^16.3.0",
+    "prettier": "3.6.2",
+    "rollup": "^4.45.1",
+    "tslib": "^2.8.1",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.37.0"
   },
   "repository": {
     "type": "https",
