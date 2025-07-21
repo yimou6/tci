@@ -1,0 +1,7 @@
+212: # 任务名称
+  host: 127.0.0.1 # 服务器地址
+  username: root # 用户名
+  password: root # 密码
+  localPath: ./dist # 本地路径
+  remotePath: /usr/test/dist # 服务器路径
+  remoteBackupPath: /usr/test/dist_backups # 备份路径

@@ -1,0 +1,57 @@
+{
+  "name": "@yimou6/tci",
+  "version": "2.0.1",
+  "description": "A Node.js CLI tool.",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "tci": "dist/index.js"
+  },
+  "files": [
+    "dist", "package.json"
+  ],
+  "scripts": {
+    "dev:start": "tsx src/index.ts start 212",
+    "build:ts": "gulp",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "cli",
+    "node"
+  ],
+  "author": "yimou6",
+  "license": "MIT",
+  "dependencies": {
+    "@types/ssh2": "^1.15.5",
+    "chalk": "^5.4.1",
+    "commander": "^14.0.0",
+    "cp": "^0.2.0",
+    "inquirer": "^12.7.0",
+    "jszip": "^3.10.1",
+    "ssh2": "^1.16.0",
+    "yaml": "^2.8.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.14",
+    "@types/yargs": "^17.0.33",
+    "@typescript-eslint/eslint-plugin": "^8.37.0",
+    "@typescript-eslint/parser": "^8.37.0",
+    "del": "^8.0.0",
+    "eslint": "^9.31.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.5.1",
+    "gulp": "^5.0.1",
+    "gulp-terser": "^2.1.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "nexe": "^5.0.0-beta.4",
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/yimou6/tci"
+  }
+}
